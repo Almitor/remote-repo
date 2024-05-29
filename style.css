@@ -1,0 +1,116 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: blue;
+    z-index: 1;
+}
+
+.header {
+    height: 40px;
+    background-color: green;
+    border-bottom: 1px solid gray;
+}
+
+.header-ul {
+    display: flex;
+    height: 40px;
+    margin: 0;
+    list-style: none;
+    justify-content: end;
+}
+
+.header-li {
+    width: 40px;
+    margin-left: 5px;
+    background-color: red;
+}
+
+.navigation {
+    height: 40px;
+    background-color: purple;
+    border-bottom: 1px solid gray;
+}
+
+.navigation-ul {
+    display: flex;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: start;
+}
+
+.navigation-li {
+    width: 100px;
+    margin-right: 5px;
+    background-color: red;
+}
+
+.container {
+    background-color: pink;
+    margin-top: 90px;
+}
+
+/*以line开头的类选择器 */
+div[class^="line"] {
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+}
+
+/*包含item的类选择器*/
+div[class*="item"]{
+    border-radius: 5px;
+    background-color: aqua;
+    flex: 1;
+    margin: 0 5px;
+}
+
+/*必须要通过更具体的选择器来增加权重，否则优先级较低无法显示效果*/
+.container .boundary-left {
+    margin-left: 0;
+}
+
+.container .boundary-right {
+    margin-right: 0;
+}
+
+.line-one {
+    height: 50px;
+}
+
+.line-two {
+    margin-top: 10px;
+    height: 120px;
+}
+
+.line-three {
+    margin-top: 10px;
+    height: 100px;
+}
+
+.line-four {
+    margin-top: 10px;
+    height: 120px;
+}
+
+.four-item:first-child {
+    flex:2;
+    margin-right: 10px;
+}
+.four-item:last-child {
+    flex: 1;
+}
+
+.line-five {
+    margin-top: 10px;
+    height: 120px;
+}
+
+.line-six {
+    margin-top: 15px;
+    height: 100px;
+}
