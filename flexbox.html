@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>flexbox</title>
+<!--    <link rel="stylesheet" href="small-style.css" media="(max-width: 760px)">-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="header-container">
         <div class="header">
+            <a class="nav-btn">点击</a>
             <ul class="header-ul">
                 <li class="header-li">1</li>
                 <li class="header-li">2</li>
@@ -75,5 +78,22 @@
             <div class="six-item boundary-right">4</div>
         </div>
     </div>
+
+<script>
+    var btn = document.querySelector(".nav-btn");
+    var header = document.querySelector(".header-ul");
+
+    btn.addEventListener("click", function (){
+        console.log("click");
+        header.classList.toggle('show');
+
+        // 直接设置内联样式会清除任何由CSS媒体查询设置的样式，内联样式具有更高的优先级
+        // if (header.style.display == "none"){
+        //     header.style.display = "block";
+        // }else {
+        //     header.style.display = "none";
+        // }
+    })
+</script>
 </body>
 </html>
